@@ -69,12 +69,32 @@ window.onload = function () {
       player2: 0
     },
     playerTurn: 1,
+    tilesElement: $('div.tiles'),
 
     //initialize the 8x8 board
     initialize: function() {
       var countPieces = 0;
       var countTiles = 0;
-    }
+      for (let row in this.board) { //row is the index
+        for (let column in this.board[row]) { //column is the index
+          //whole set of if statements control where the tiles and pieces should be placed on the board
+          if (row % 2 == 1) {
+            if (column % 2 == 0) {
+              countTiles = this.tileRender(row, column, countTiles)
+            }
+          } else {
+            if (column % 2 == 1) {
+              countTiles = this.tileRender(row, column, countTiles)
+            }
+          }
+          if (this.board[row][column] == 1) {
+            countPieces = this.playerPiecesRender(1, row, column, countPieces)
+          } else if (this.board[row][column] == 2) {
+            countPieces = this.playerPiecesRender(2, row, column, countPieces)
+          }
+        }
+      }
+    },
 
     //initialize function for Board
     Board.initialize();
