@@ -104,3 +104,7 @@ window.onload = function () {
     Board.clear();
   });
   }
+} }
+
+//connect player 1 pieces to "1"s & player 2 pieces to "2"s
+//how to generate red-black 8x8 tile pattern?
