@@ -95,14 +95,27 @@ window.onload = function () {
         }
       }
     },
+    tileRender: function (row, column, countTiles) {
+      this.tilesElement.append("<div class='tile' id='tile" + countTiles + "' style='top:" + this.dictionary[row] + ";left:" + this.dictionary[column] + ";'></div>");
+      tiles[countTiles] = new Tile($("#tile" + countTiles), [parseInt(row), parseInt(column)]);
+      return countTiles + 1
+    }
 
     //initialize function for Board
-    Board.initialize();
+    //Board.initialize();
 
     //reset game when clear button is pressed
-  $('#cleargame').on("click", function () {
-    Board.clear();
-  });
+  //$('#cleargame').on("click", function () {
+    //Board.clear();
+  //});
+  //$('.tile').on("click", function () {
+    //make sure a piece is selected
+    //if ($('.selected').length != 0) {
+      //find the tile object being clicked
+      //var tileID = $(this).attr("id").replace(/tile/, '');
+      //var tile = tiles[tileID];
+      //find the piece being selected
+      //var piece = pieces[$('.selected').attr("id")];
   }
 } }
 
