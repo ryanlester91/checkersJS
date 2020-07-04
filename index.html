@@ -6,13 +6,13 @@
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" id="bootstrap-css">--> 
 </head>
   <style>
-    .row {
+    /*.row {
       /*display: flex;
       justify-content: space-evenly;*/
       /*width: 880px;
       height: 800px;
       border: 1px solid black;*/
-    }
+    /*}*/
     .cell {
       width: 100px;
       height: 100px;
@@ -20,11 +20,39 @@
       margin: 0px;
     }
     .black {
-      background-color: black;
+      background-color: #292C34;
     }
     .white{
       background-color: darkred;
     }
+    .checker {
+    margin: 10%;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.white-checker {
+    
+    background-size: cover;
+    color: #444444;
+}
+
+.black-checker {
+    
+    background-size: cover;
+    color: #cccccc;
+}
+
+.selected {
+    margin: 0;
+    border: 1vmin solid rgba(255,255,255,0.5);
+    background-repeat: no-repeat;
+}
 
 
 
@@ -37,35 +65,59 @@
       <div id="gameboard">
         <div id="row-1" class="row">
             <div id="cell-1-1" class="cell white"></div>
-            <div id="cell-1-2" class="cell black"></div>
+            <div id="cell-1-2" class="cell black">
+              <div class="checker"></div>
+            </div>
             <div id="cell-1-3" class="cell white"></div>
-            <div id="cell-1-4" class="cell black"></div>
+            <div id="cell-1-4" class="cell black">
+              <div class="checker"></div>
+            </div>
             <div id="cell-1-5" class="cell white"></div>
-            <div id="cell-1-6" class="cell black"></div>
+            <div id="cell-1-6" class="cell black">
+              <div class="checker"></div>
+            </div>
             <div id="cell-1-7" class="cell white"></div>
-            <div id="cell-1-8" class="cell black"></div>
+            <div id="cell-1-8" class="cell black">
+              <div class="checker"></div>
+            </div>
           </div>
         
         <div id="row-2" class="row">
-          <div id="cell-2-1" class="cell black"></div>
+          <div id="cell-2-1" class="cell black">
+            <div class="checker"></div>
+          </div>
           <div id="cell-2-2" class="cell white"></div>
-          <div id="cell-2-3" class="cell black"></div>
+          <div id="cell-2-3" class="cell black">
+            <div class="checker"></div>
+          </div>
           <div id="cell-2-4" class="cell white"></div>
-          <div id="cell-2-5" class="cell black"></div>
+          <div id="cell-2-5" class="cell black">
+            <div class="checker"></div>
+          </div>
           <div id="cell-2-6" class="cell white"></div>
-          <div id="cell-2-7" class="cell black"></div>
+          <div id="cell-2-7" class="cell black">
+            <div class="checker"></div>
+          </div>
           <div id="cell-2-8" class="cell white"></div>
         </div>
 
         <div id="row-3" class="row">
           <div id="cell-3-1" class="cell white"></div>
-          <div id="cell-3-2" class="cell black"></div>
+          <div id="cell-3-2" class="cell black">
+            <div class="checker"></div>
+          </div>
           <div id="cell-3-3" class="cell white"></div>
-          <div id="cell-3-4" class="cell black"></div>
+          <div id="cell-3-4" class="cell black">
+            <div class="checker"></div>
+          </div>
           <div id="cell-3-5" class="cell white"></div>
-          <div id="cell-3-6" class="cell black"></div>
+          <div id="cell-3-6" class="cell black">
+            <div class="checker"></div>
+          </div>
           <div id="cell-3-7" class="cell white"></div>
-          <div id="cell-3-8" class="cell black"></div>
+          <div id="cell-3-8" class="cell black">
+            <div class="checker"></div>
+          </div>
         </div>
 
         <div id="row-4" class="row">
@@ -128,7 +180,8 @@
         </div>
   </body>
   
-  <script src="game.js"></script>
+  <!--<script src="game.js"></script>-->
   <!--<script src="script.js"></script>-->
+  <script src="checker.js"></script>
   
   </html>
