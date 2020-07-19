@@ -7,15 +7,15 @@ function cell(rowNum, cellNum) {
     console.log(`writing cell ${rowNum, cellNum} and even is ${even}`)
     if (even) {
         return `
-        <div id="cell-1-2" class="cell black">
+        <div id="cell-1-${cellNum}" class="cell black">
             <div class="checker white-checker"></div>
         </div>
         `
     } else
-    return `<div id="cell-1-1" class="cell white"></div>`
+    return `<div id="cell-1-${cellNum}" class="cell white"></div>`
 }
 
-let rowTemplate = `
+/*let rowTemplate = `
     ${cell(1,1)}
     ${cell(1,2)}
     ${cell(1,3)}
@@ -24,4 +24,12 @@ let rowTemplate = `
     ${cell(1,6)}
     ${cell(1,7)}
     ${cell(1,8)}
-`
+`*/
+function rowTemplate() {
+    let rowString = ''
+    for(let cellNum=1; cellNum<=8; cellNum++) {
+        rowString = rowString + cell(1, cellNum)
+        console.log(rowString);
+    }
+    return rowString
+}
