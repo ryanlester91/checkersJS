@@ -9,6 +9,9 @@
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" id="bootstrap-css">--> 
 </head>
   <style>
+    body {
+      text-align: center;
+    }
     /*.row {
       /*display: flex;
       justify-content: space-evenly;*/
@@ -17,10 +20,12 @@
       border: 1px solid black;*/
     /*}*/
     .cell {
-      width: 100px;
-      height: 100px;
+      width: 8vw;
+      height: 8vw;
       display: inline-block;
       margin: 0px;
+      max-width: 10vh;
+      max-height: 10vh;
     }
     .black {
       /*background-color: #292C34;
@@ -60,7 +65,7 @@ background-color: #444444;
 </style>
   <body>
       <h1>Checkers</h1>
-      <div id="gameboard">
+      <div id="board-container">
         <div id="row-1" class="row">
             <!--<div id="cell-1-1" class="cell white"></div>
             <div id="cell-1-2" class="cell black">
