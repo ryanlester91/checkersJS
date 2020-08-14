@@ -7,12 +7,12 @@ $(document).ready(function () {
 function toggle() {
     let checker = $(this).children().first();
     checker.toggle();
-    if(!checker.is(":visible")){
-        switchColor(checker);
-    }
+    //if(!checker.is(":visible")){
+        //switchColor(checker);
+    //}
 }
 
-function switchColor(checker) {
+/*function switchColor(checker) {
     if (checker.hasClass('black-checker')) {
         checker.removeClass('black-checker')
         checker.addClass('white-checker')
@@ -20,4 +20,4 @@ function switchColor(checker) {
         checker.addClass('black-checker')
         checker.removeClass('white-checker')
     }
-}
+}*/
