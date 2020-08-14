@@ -1,11 +1,5 @@
-function cellTemplate(rowNum, cellNum) {
-   //figure out the parity of the row and cell
-   var isCellEven = true
-   var isRowEven = true
-   if (cellNum % 2 == 1) isCellEven = false
-   if (rowNum % 2 == 1) isRowEven = false
-    //console.log(`writing cell ${rowNum, cellNum} and even is ${even}`)
-    if (isCellEven != isRowEven) {
+function renderCell(rowNum, cellNum) {
+    if (determineColor(rowNum, cellNum) === 'black') {
         //Black Cell
         
         let cellString =`
@@ -43,23 +37,23 @@ function determineColor(rowNum, cellNum) {
     else return 'black'
 }
 
-function rowTemplate(rowNum) {
+function renderRow(rowNum) {
     var rowString = ''
     console.log(`drawing row number ${rowNum}`);
     for(var cellNum=1; cellNum<=8; cellNum++) {
         rowString = rowString + `<div id="row-${rowNum}" class="row">`
-        rowString = rowString + cellTemplate(rowNum, cellNum)
+        rowString = rowString + renderCell(rowNum, cellNum)
         rowString = rowString + `</div>`
         //console.log(rowString);
     }
     return rowString
 }
 
-function boardTemplate() {
+function renderBoard() {
     var boardString = ''
     for(var rowNum=1; rowNum<=8; rowNum++) {
         
-        boardString = boardString + rowTemplate(rowNum);
+        boardString = boardString + renderRow(rowNum);
         
         //console.log(boardString);
     }

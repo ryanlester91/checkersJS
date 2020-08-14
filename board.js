@@ -1,6 +1,7 @@
 $(document).ready(function () {
     console.log('document ready');
-    $('.black.cellTemplate').click(toggle);
+    $('#board-container').html(renderBoard())
+    $('.black.cell').click(toggle);
 })
 
 function toggle() {
