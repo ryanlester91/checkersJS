@@ -1,7 +1,5 @@
-//let cell11 = `<div id="cell-1-1" class="cell white"></div>`
-
 function cellTemplate(rowNum, cellNum) {
-   //console.log(cellNum % 2)
+   //figure out the parity of the row and cell
    var isCellEven = true
    var isRowEven = true
    if (cellNum % 2 == 1) isCellEven = false
@@ -9,26 +7,42 @@ function cellTemplate(rowNum, cellNum) {
     //console.log(`writing cell ${rowNum, cellNum} and even is ${even}`)
     if (isCellEven != isRowEven) {
         //Black Cell
-        return `
+        
+        let cellString =`
         <div id="cell-${rowNum}-${cellNum}" class="cell black">
             <div class="checker white-checker"></div>
         </div>
-        `
+        `;
+        if (rowNum <=3) {
+            cellString = cellString + checkerTemplate('white', 'false')
+        }
+        else if (rowNum >=6) {
+        cellString = cellString + checkerTemplate('black', 'false')
+        }
+        else {
+            cellString = cellString + checkerTemplate('black', 'true')
+        }
+        cellString = cellString + `</div>`
+        return cellString
     } else
         //White Cell
     return `<div id="cell-${rowNum}-${cellNum}" class="cell white"></div>`
 }
 
-/*let rowTemplate = `
-    ${cell(1,1)}
-    ${cell(1,2)}
-    ${cell(1,3)}
-    ${cell(1,4)}
-    ${cell(1,5)}
-    ${cell(1,6)}
-    ${cell(1,7)}
-    ${cell(1,8)}
-`*/
+function checkerTemplate(color, hidden) {
+    return `<div class="checker ${color}-checker" hidden="${hidden}"></div>`
+}
+
+function parity(num) {
+    if (num % 2 === 0) return 'even'
+    else return 'odd'
+}
+
+function determineColor(rowNum, cellNum) {
+    if(parity(rowNum) === parity(cellNum)) return 'white'
+    else return 'black'
+}
+
 function rowTemplate(rowNum) {
     var rowString = ''
     console.log(`drawing row number ${rowNum}`);
