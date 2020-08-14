@@ -1,43 +1,50 @@
-div#gameboard {
-    position: absolute;
-    top: calc(50% - 40vmin);
-    left: calc(50% - 40vmin);
-    width: 80vmin;
-    height: 80vmin;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px #232621;
-    background-color: #B93848;
-    overflow: hidden; }
-  
-    div#gameboard .tiles {
-      width: 10vmin;
-      height: 10vmin;
-      position: absolute;
-      background-color: #232621; }
-  
-      div#gameboard .pieces {
-      position: absolute;
-      width: 8vmin;
-      height: 8vmin;
-      background-color: #B93848;
-      background-size: 65%;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 6vmin;
+  body {
+      text-align: center;
+    }
+    .row {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .cell {
+      width: 8vw;
+      height: 8vw;
       display: inline-block;
-      box-sizing: border-box;
-      transition: all 0.2s linear;
-      margin-top: 1vmin;
-      margin-left: 1vmin;
-      cursor: pointer;
-      border: 1vmin solid #e4a6ae; }
-      div#gameboard .pieces.selected {
-        box-shadow: 0 0 10px 5px #16A8C7; }
-  
-      div#button .checker {
-          margin: 10px;
-          border-radius: 50%;
-          height: 40px;
-          width: 40px;
-          background-color: cyan;
-      }
+      margin: 0px;
+      max-width: 10vh;
+      max-height: 10vh;
+    }
+    .black {
+      /*background-color: #292C34;
+      */
+      background-image: url('black-marble-tile.jpg');
+    }
+    .white{
+      /*background-color: darkred;*/
+      background-image: url('lava-tile.jpg');
+    }
+    .checker {
+    margin: 10%;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: tan;*/
+}
+
+.white-checker {
+background-size: cover;
+background-color: #DC143C;
+}
+
+.black-checker {
+background-size: cover;
+background-color: #444444;
+}
+
+.selected {
+    margin: 0;
+    border: 1vmin solid rgba(255,255,255,0.5);
+    background-repeat: no-repeat;
+}
