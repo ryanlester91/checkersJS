@@ -4,12 +4,12 @@ $(document).ready(function () {
     $('.black.cell').click(toggle);
 })
 
-function toggle() {
+function toggle(){
     let checker = $(this).children().first();
     checker.toggle();
-    //if(!checker.is(":visible")){
-        //switchColor(checker);
-    //}
+    /*if(!checker.is(":visible")){
+        switchColor(checker);
+    }*/
 }
 
 /*function switchColor(checker) {

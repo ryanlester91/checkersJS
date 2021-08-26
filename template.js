@@ -30,20 +30,27 @@ function renderCell(rowNum, cellNum) {
     if (determineColor(rowNum, cellNum) === 'black') {
         //Black cell
         return `
-        <div id="cell-${rowNum}-${cellNum}" class="cell black"> 
+        <div id="cell-${rowNum}-${cellNum}" class="cell black">
+        ${renderChecker(rowNum)}
+        </div> 
         `
     } else
         //White Cell
-    return `<div id="cell-${rowNum}-${cellNum}" class="cell white"></div>`
+    return `<div id="cell-${rowNum}-${cellNum}" class="cell white">
+    ${renderChecker(rowNum)}
+    </div>`
 }
 
 function renderChecker(rowNum) {
     if (rowNum <=3) {
         return `<div class="checker white-checker"></div>`
+        //console.log(`<div class="checker white-checker"></div>`)
     } else if (rowNum >=6) {
         return `<div class="checker black-checker"></div>`
+        //console.log(`<div class="checker black-checker"></div>`)
     } else {
         return `<div class="checker black-checker" hidden="true"></div>`
+        //console.log(`<div class="checker black-checker" hidden="true"></div>`)
     }
 }
 
@@ -57,6 +64,7 @@ function determineColor(rowNum, cellNum) {
     return parity(cellNum) == parity(rowNum) ? 'white' : 'black'
 }
 
+renderChecker();
 
 
 
