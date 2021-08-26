@@ -49,7 +49,7 @@ function renderChecker(rowNum) {
         return `<div class="checker black-checker"></div>`
         //console.log(`<div class="checker black-checker"></div>`)
     } else {
-        return `<div class="checker black-checker" hidden="true"></div>`
+        return `<div class="checker black-checker"><style>visibility:hidden</style></div>`
         //console.log(`<div class="checker black-checker" hidden="true"></div>`)
     }
 }
