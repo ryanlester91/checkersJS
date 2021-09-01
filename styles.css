@@ -11,6 +11,7 @@
       height: 8vw;
       display: inline-block;
       margin: 0px;
+      padding: 3px;
       max-width: 10vh;
       max-height: 10vh;
     }
@@ -18,10 +19,12 @@
       /*background-color: #292C34;
       */
       background-image: url('black-marble-tile.jpg');
+      border: 1px solid grey;
     }
     .white{
       /*background-color: darkred;*/
       background-image: url('lava-tile.jpg');
+      border: 1px solid red;
     }
     .checker {
     margin: 10%;
