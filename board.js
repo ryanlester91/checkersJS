@@ -8,9 +8,9 @@ $(document).ready(function () {
 function toggle(){
     let checker = $(this).children().first();
     checker.toggle();
-    /*if(!checker.is(":visible")){
+    if(!checker.is(":visible")){
         switchColor(checker);
-    }*/
+    }
 }
 
 /*function switchColor(checker) {
