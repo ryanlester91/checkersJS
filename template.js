@@ -1,3 +1,5 @@
+var selectedChecker = undefined;
+
 var checkers = [
     {row: 1, cell: 2, color: "white"},
     {row: 1, cell: 4, color: "white"},
@@ -104,8 +106,10 @@ function determineColor(rowNum, cellNum) {
 
 renderChecker();
 
-function selectChecker(checker){
-    
+function selectChecker(){
+    let checker = $(this).children().first();
+    console.log('selecting checker', checker);
+    selectedChecker = checker
 }
 
 

@@ -1,7 +1,7 @@
 $(document).ready(function () {
     console.log('document ready');
     $('#board-container').html(renderBoard())
-    $('.black.cell').click(toggle);
+    $('.black.cell').click(selectChecker);
     renderCheckers();
 })
 
@@ -13,7 +13,7 @@ function toggle(){
     }
 }
 
-/*function switchColor(checker) {
+function switchColor(checker) {
     if (checker.hasClass('black-checker')) {
         checker.removeClass('black-checker')
         checker.addClass('white-checker')
@@ -21,4 +21,4 @@ function toggle(){
         checker.addClass('black-checker')
         checker.removeClass('white-checker')
     }
-}*/
+}
