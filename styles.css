@@ -51,3 +51,9 @@ background-color: #444444;
 .selected {
     border: 1px dashed yellow;
 }
+
+.checker-wrapper{
+  height: 100%;
+  width: 100%;
+  background-color: aliceblue;
+}

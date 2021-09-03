@@ -42,7 +42,7 @@ function renderCheckers(){
 }
 
 function renderChecker(i, color) {
-    return `<div><div id="checker-${i}" class="checker ${color}-checker"></div></div>`
+    return `<div class="checker-wrapper"><div id="checker-${i}" class="checker ${color}-checker"></div></div>`
 }
 
 
@@ -50,21 +50,21 @@ function renderChecker(i, color) {
 renderChecker();
 
 function selectChecker(){
-    $('.selected').removeClass('selected')
+    $(".selected").removeClass("selected")
     let checker = $(this)
-    let id = checker.attr('id')
-    console.log('selecting checker', checker);
+    let id = checker.attr("id")
+    console.log("selecting checker", checker);
     console.log(`the id of checker is ${id} `)
     
-    let stringParts = id.split('-')
-    console.log('checker =', stringParts, id)
+    let stringParts = id.split("-")
+    console.log("checker =", stringParts, id)
 
     let checkerIndex = stringParts[1]
     console.log(checkerIndex)
 
     selectedChecker = checker
 
-    checker.parent().addClass('selected')
+    checker.parent().addClass("selected")
 
 }
 
