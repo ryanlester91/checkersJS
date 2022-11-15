@@ -5,7 +5,8 @@ $(document).ready(function () {
     clearBoard();
     console.log('click handler')
     renderCheckers();
-    $('.black .cell').click(moveSelectedCheckerHere);
+    //$('.black .cell').click(moveSelectedCheckerHere);
+      $('#cell-${checker.row}-${checker.col}').html(renderChecker(), checker.color)
 })
 
 function toggle(){
