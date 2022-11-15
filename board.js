@@ -2,6 +2,7 @@ $(document).ready(function () {
     console.log('document ready');
     $('#board-container').html(renderBoard())
     $('.checker').click(selectChecker);
+    clearBoard();
     console.log('click handler')
     renderCheckers();
     $('.black .cell').click(moveSelectedCheckerHere);
@@ -85,4 +86,8 @@ function moveSelectedCheckerHere(){
   } else {
     console.log('select a checker');
   }
+}
+
+function clearBoard(){
+  $('.black.cell').html('');
 }
