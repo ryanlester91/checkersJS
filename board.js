@@ -4,6 +4,7 @@ $(document).ready(function () {
     $('.checker').click(selectChecker);
     console.log('click handler')
     renderCheckers();
+    $('.black .cell').click(moveSelectedCheckerHere);
 })
 
 function toggle(){
@@ -75,4 +76,8 @@ function parity(num) {
 
 function determineColor(rowNum, cellNum) {
     return parity(cellNum) == parity(rowNum) ? 'white' : 'black'
+}
+
+function moveSelectedCheckerHere(){
+  console.log('bacon');
 }
