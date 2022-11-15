@@ -80,4 +80,9 @@ function determineColor(rowNum, cellNum) {
 
 function moveSelectedCheckerHere(){
   console.log('bacon');
+  if(selectChecker) {
+    console.log('move checker to here');
+  } else {
+    console.log('select a checker');
+  }
 }
