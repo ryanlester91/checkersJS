@@ -81,11 +81,13 @@ function determineColor(rowNum, cellNum) {
 
 function moveSelectedCheckerHere(){
   console.log('bacon');
-  if(selectChecker) {
+  if(selectedChecker) {
     console.log('move checker to here');
   } else {
     console.log('select a checker');
   }
+  selectedChecker.row=4;
+  selectedChecker.col=1;
 }
 
 function clearBoard(){
